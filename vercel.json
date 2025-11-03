@@ -1,14 +1,8 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "angular.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist/rakesh-portfolio"
-      }
-    }
-  ],
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/rakesh-portfolio",
+  "framework": "angular",
   "routes": [
     {
       "src": "/(.*)",
