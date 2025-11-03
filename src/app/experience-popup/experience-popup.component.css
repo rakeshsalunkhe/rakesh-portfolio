@@ -1,0 +1,193 @@
+/* ============================= */
+/* Popup container */
+.popup {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 30px 40px;
+  color: #fff;
+  width: 85%;
+  max-width: 750px;
+  max-height: 80vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+  text-align: center;
+  backdrop-filter: blur(15px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+/* ============================= */
+/* Vertical scrollbar styling */
+.popup::-webkit-scrollbar {
+  width: 8px;
+}
+.popup::-webkit-scrollbar-track {
+  background: transparent;
+}
+.popup::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(0,255,255,0.18), rgba(0,255,255,0.35));
+  border-radius: 6px;
+  border: 1px solid rgba(0,0,0,0.15);
+}
+.popup::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, rgba(0,255,255,0.28), rgba(0,255,255,0.5));
+}
+.popup {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,255,255,0.35) transparent;
+}
+
+/* ============================= */
+/* Header */
+h2 {
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #0ff;
+  text-shadow: 0 0 12px rgba(0, 255, 255, 0.5);
+}
+
+/* ============================= */
+/* Experience list */
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 5px;
+  box-sizing: border-box;
+}
+
+/* ============================= */
+/* Experience card */
+.experience-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 20px 22px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.08);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.experience-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.25);
+}
+
+/* ============================= */
+/* Header section */
+.exp-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4px;
+}
+
+.exp-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0ff;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+}
+
+.exp-company {
+  font-size: 0.95rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+/* ============================= */
+/* Dates */
+.exp-dates {
+  font-size: 0.85rem;
+  color: #aaa;
+  margin: 6px 0 10px 0;
+}
+
+/* ============================= */
+/* Responsibilities list */
+.responsibilities {
+  list-style: disc;
+  margin: 0;
+  padding-left: 20px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  opacity: 0.85;
+}
+
+.responsibilities li {
+  margin-bottom: 6px;
+  transition: color 0.2s ease;
+}
+
+.responsibilities li:hover {
+  color: #0ff;
+}
+
+/* ============================= */
+/* Close button */
+.close-btn {
+  margin-top: 25px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  background: rgba(0, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* ============================= */
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .popup {
+    width: 90%;
+    padding: 22px 26px;
+  }
+
+  .experience-card {
+    padding: 15px 18px;
+  }
+
+  .exp-title {
+    font-size: 1rem;
+  }
+
+  .exp-company,
+  .exp-dates,
+  .responsibilities {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .popup {
+    max-height: 75vh;
+    padding: 15px 20px;
+  }
+
+  .experience-card {
+    padding: 12px 14px;
+  }
+
+  .exp-title {
+    font-size: 0.95rem;
+  }
+
+  .responsibilities {
+    font-size: 0.8rem;
+  }
+}

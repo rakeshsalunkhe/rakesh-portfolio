@@ -1,0 +1,26 @@
+<div @popupAnim class="popup-container">
+  <div class="overlay" (click)="closePopup()"></div>
+
+  <div class="popup">
+    <h2>Experience</h2>
+
+    <div class="experience-list">
+      <div class="experience-card" *ngFor="let exp of experiences">
+        <div class="exp-header">
+          <div class="exp-title">{{ exp.Designation }}</div>
+          <div class="exp-company">{{ exp.Organisation }}</div>
+        </div>
+
+        <div class="exp-dates">
+          {{ exp.StartDate }} – {{ exp.EndDate }}
+        </div>
+
+        <ul class="responsibilities">
+          <li *ngFor="let task of exp.Responsibilities">{{ task }}</li>
+        </ul>
+      </div>
+    </div>
+
+    <button class="close-btn" (click)="closePopup()">Close</button>
+  </div>
+</div>

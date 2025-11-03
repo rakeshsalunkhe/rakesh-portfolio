@@ -1,0 +1,58 @@
+<div @popupAnim class="popup-container">
+  <div class="overlay" (click)="closePopup()"></div>
+
+  <div class="popup">
+    <h2>Contact Me</h2>
+
+    <div class="contact-info">
+      <!-- Email -->
+      <p class="contact-row">
+        <strong>Email:</strong>
+        <span class="contact-value">{{ contact.email }}</span>
+        <button
+          class="copy-btn"
+          title="Copy email"
+          (click)="copyToClipboard(contact.email, 'email')"
+        >
+          📋
+        </button>
+        <span
+          *ngIf="copiedField === 'email'"
+          class="copied-msg"
+        >Copied!</span>
+      </p>
+
+      <!-- Phone -->
+      <p class="contact-row">
+        <strong>Phone:</strong>
+        <span class="contact-value">{{ contact.phone }}</span>
+        <button
+          class="copy-btn"
+          title="Copy phone"
+          (click)="copyToClipboard(contact.phone, 'phone')"
+        >
+          📋
+        </button>
+        <span
+          *ngIf="copiedField === 'phone'"
+          class="copied-msg"
+        >Copied!</span>
+      </p>
+
+      <!-- Other info -->
+      <p><strong>Location:</strong> {{ contact.location }}</p>
+
+      <p>
+        <strong>LinkedIn:</strong>
+        <a [href]="contact.linkedin" target="_blank">{{ contact.linkedin }}</a>
+      </p>
+
+      <p>
+        <strong>GitHub:</strong>
+        <a [href]="contact.github" target="_blank">{{ contact.github }}</a>
+      </p>
+    </div>
+
+    <button class="close-btn" (click)="closePopup()">Close</button>
+  </div>
+</div>

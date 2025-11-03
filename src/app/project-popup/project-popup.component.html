@@ -1,0 +1,23 @@
+<div @popupAnim class="popup-container">
+  <div class="overlay" (click)="closePopup()"></div>
+
+  <div class="popup">
+    <h2>Projects</h2>
+
+    <div class="projects-list">
+      <div class="project-card" *ngFor="let project of projects">
+        <h3 class="project-name">{{ project.Name }}</h3>
+        <p class="project-role"><strong>Role:</strong> {{ project.Role }}</p>
+        <p class="project-duration"><strong>Duration:</strong> {{ project.Duration }}</p>
+        <p class="project-team"><strong>Team Size:</strong> {{ project.TeamSize }}</p>
+        <p class="project-description">{{ project.Description }}</p>
+
+        <div class="tech-list">
+          <span class="tech-tag" *ngFor="let tech of project.Technology">{{ tech }}</span>
+        </div>
+      </div>
+    </div>
+
+    <button class="close-btn" (click)="closePopup()">Close</button>
+  </div>
+</div>

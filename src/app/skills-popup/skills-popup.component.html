@@ -1,0 +1,16 @@
+<!-- animate the outermost container -->
+<div *ngIf="visible"
+     @popupAnim
+     class="popup-container">
+  <div class="overlay" (click)="closePopup()"></div>
+
+  <div class="popup">
+    <h2>Skills</h2>
+
+    <div class="skills-list">
+      <div class="skill" *ngFor="let skill of skills">{{ skill }}</div>
+    </div>
+
+    <button class="close-btn" (click)="closePopup()">Close</button>
+  </div>
+</div>

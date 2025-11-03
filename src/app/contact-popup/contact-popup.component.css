@@ -1,0 +1,75 @@
+.contact-info {
+  text-align: left;
+  color: #fff;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0;
+  font-size: 1rem;
+  opacity: 0.9;
+  flex-wrap: wrap;
+}
+
+.contact-value {
+  color: #0ff;
+  word-break: break-all;
+}
+
+/* Copy icon button */
+.copy-btn {
+  background: transparent;
+  border: none;
+  color: #0ff;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 3px;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copy-btn:hover {
+  transform: scale(1.2);
+  color: #80ffff;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.8);
+}
+
+/* "Copied!" feedback */
+.copied-msg {
+  font-size: 0.8rem;
+  color: #80ffff;
+  margin-left: 6px;
+  opacity: 0.8;
+  animation: fadeOut 1.5s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Links */
+.contact-info a {
+  color: #0ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #80ffff;
+  text-decoration: underline;
+}

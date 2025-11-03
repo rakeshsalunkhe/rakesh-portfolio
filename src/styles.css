@@ -1,1 +1,60 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* 🌐 Global Popup Styles — shared by all popup components */
+.popup-container {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(12px) saturate(120%);
+  -webkit-backdrop-filter: blur(12px) saturate(120%);
+  z-index: 1;
+}
+
+.popup {
+  position: relative;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(0, 255, 255, 0.25);
+  border-radius: 20px;
+  padding: 30px 40px;
+  color: #fff;
+  width: 80%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 0 35px rgba(0, 255, 255, 0.35);
+  z-index: 2;
+
+  backdrop-filter: blur(25px) brightness(1.2) contrast(1.1);
+  -webkit-backdrop-filter: blur(25px) brightness(1.2) contrast(1.1);
+}
+
+.popup h2 {
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff;
+}
+
+.popup .close-btn {
+  margin-top: 25px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.popup .close-btn:hover {
+  background: rgba(0, 255, 255, 0.2);
+  transform: scale(1.05);
+}

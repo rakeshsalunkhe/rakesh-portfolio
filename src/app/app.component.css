@@ -1,0 +1,15 @@
+.app-background {
+  position: relative;          /* creates a stacking context */
+  height: 100vh;
+  width: 100vw;
+  background: radial-gradient(circle at 20% 20%, #002b2b, #000);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  pointer-events: none;        /* 🩵 stop this wrapper from catching clicks */
+}
+
+.app-background * {
+  pointer-events: auto;        /* re-enable clicks for its children */
+}
