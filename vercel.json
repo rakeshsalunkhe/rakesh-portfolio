@@ -1,12 +1,13 @@
 {
-  "version": 2,
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist/rakesh-portfolio",
-  "framework": "angular",
+  "version": 3,
+  "builds": [
+    { "src": "dist/rakesh-portfolio/browser/**", "use": "@vercel/static" }
+  ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "dist/rakesh-portfolio/browser/index.html"
     }
-  ]
+  ],
+  "outputDirectory": "dist/rakesh-portfolio/browser"
 }
