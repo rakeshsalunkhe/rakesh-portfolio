@@ -13,7 +13,7 @@ export class AboutComponent implements OnInit {
   name = '';
   headline = '';
   about: string[] = [];
-  
+  isMenuOpen = false;
   constructor(private portfolioService: PortfolioService) {}
 
   ngOnInit(): void {

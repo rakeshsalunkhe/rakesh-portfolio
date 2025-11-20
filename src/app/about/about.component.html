@@ -1,7 +1,8 @@
 <div class="about-container">
   <div class="about-content">
+    
     <div class="avatar">
-       <img src="assets/profile.jpeg" alt="Profile photo" />
+      <img src="assets/profile.jpeg" alt="Profile photo" />
     </div>
 
     <div class="about-info">
@@ -12,12 +13,27 @@
         <p *ngFor="let line of about">{{ line }}</p>
       </div>
 
-      <div class="buttons">
+      <!-- Normal Desktop Buttons -->
+      <div class="buttons desktop-buttons">
         <button (click)="openSection('skills')">Skills</button>
         <button (click)="openSection('projects')">Projects</button>
         <button (click)="openSection('experience')">Experience</button>
         <button (click)="openSection('contact')">Contact</button>
       </div>
+    </div>
+  </div>
+
+  <!-- Floating Mobile Menu -->
+  <div class="mobile-menu">
+    <div class="hamburger" (click)="isMenuOpen = !isMenuOpen">
+      ☰
+    </div>
+
+    <div class="mobile-menu-panel" [class.open]="isMenuOpen">
+      <button (click)="openSection('skills'); isMenuOpen=false">Skills</button>
+      <button (click)="openSection('projects'); isMenuOpen=false">Projects</button>
+      <button (click)="openSection('experience'); isMenuOpen=false">Experience</button>
+      <button (click)="openSection('contact'); isMenuOpen=false">Contact</button>
     </div>
   </div>
 </div>
